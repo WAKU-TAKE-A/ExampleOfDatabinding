@@ -1,0 +1,11 @@
+<Window 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Example of data binding" Height="300" Width="300">
+
+    <StackPanel>
+        <TextBox Text="{Binding Path=Txt_One, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        <Button Content="Copy the above string." Command="{Binding Path=Run_Btn_One_Command}"/>
+        <TextBox Text="{Binding Path=Txt_Two, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+    </StackPanel>
+</Window>
