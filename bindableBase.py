@@ -9,7 +9,7 @@ Implement the 'INotifyPropertyChanged' interface.
 from System.ComponentModel import INotifyPropertyChanged
 from System.ComponentModel import PropertyChangedEventArgs
 
-class ViewModelBase(INotifyPropertyChanged):
+class BindableBase(INotifyPropertyChanged):
     
     def add_PropertyChanged(self, handler):
         if not hasattr(self, "_propertyChangedHandlers"):
@@ -26,7 +26,7 @@ class ViewModelBase(INotifyPropertyChanged):
             except ValueError:
                 pass
  
-    def RaisePropertyChanged(self, propertyName):
+    def OnPropertyChanged(self, propertyName):
         if not hasattr(self, "_propertyChangedHandlers"):
             self._propertyChangedHandlers = []
         else:

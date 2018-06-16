@@ -8,7 +8,7 @@ Implement the 'ICommand' interface.
 
 from System.Windows.Input import ICommand
 
-class RelayCommand(ICommand):
+class DelegateCommand(ICommand):
     def __init__(self, execute):
         self.execute = execute
     

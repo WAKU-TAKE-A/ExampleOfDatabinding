@@ -4,14 +4,14 @@
 ViewModel.
 """
 
-from viewModelBase import ViewModelBase
-from relayCommand import RelayCommand
+from bindableBase import BindableBase
+from delegateCommand import DelegateCommand
 
-class Example_databinding_viewmodel(ViewModelBase):
+class Example_databinding_viewmodel(BindableBase):
 
     def __init__(self):
         # Set command.
-        self.Run_Btn_One_Command = RelayCommand(self.Run_Btn_One)
+        self.Run_Btn_One_Command = DelegateCommand(self.Run_Btn_One)
 
     # Txt_One property.
     _Txt_One = "One"
@@ -25,7 +25,7 @@ class Example_databinding_viewmodel(ViewModelBase):
         if self._Txt_One == value:
             return
         self._Txt_One = value
-        self.RaisePropertyChanged("")
+        self.OnPropertyChanged("")
 
     # Txt_Two property.
     _Txt_Two = "two"
@@ -39,7 +39,7 @@ class Example_databinding_viewmodel(ViewModelBase):
         if self._Txt_Two == value:
             return
         self._Txt_Two = value
-        self.RaisePropertyChanged("")
+        self.OnPropertyChanged("")
     
     def Run_Btn_One(self):
         print("Run_Btn_One")
