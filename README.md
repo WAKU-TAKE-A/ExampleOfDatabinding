@@ -1,4 +1,4 @@
-# example_databinding
+# Example of Databinding
 
 Example of data binding in Ironpython script.
 
