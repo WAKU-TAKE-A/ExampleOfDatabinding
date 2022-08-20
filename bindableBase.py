@@ -31,5 +31,4 @@ class BindableBase(INotifyPropertyChanged):
             self._propertyChangedHandlers = []
         else:
             for handler in self._propertyChangedHandlers:
-                handler(self, PropertyChangedEventArgs(propertyName))   
- 
+                handler(self, PropertyChangedEventArgs(propertyName))
