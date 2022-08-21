@@ -18,7 +18,7 @@ Example of data binding in Ironpython script.
 ## Notes on execution.
 
 * Open this folder with `Visual Studio Code` and execute it.
-  * You need the `Python` extension created by Don Jayamanne.
+  * You need the `Python` extension.
 * Edit `python.pythonPath` in` settings.json` in the `.vscod` folder to the appropriate path.
 
 ```
